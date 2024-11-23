@@ -2,11 +2,11 @@
 
 layout(local_size_x = 1024, local_size_y = 1, local_size_z = 1) in;
 
-layout(binding = 0) buffer InputBuffer {
+layout(binding = 0) readonly buffer InputBuffer {
     float input_values[];
 };
 
-layout(binding = 1) buffer OutputBuffer {
+layout(binding = 1) writeonly buffer OutputBuffer {
     float output_values[];
 };
 

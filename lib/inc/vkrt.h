@@ -2,6 +2,10 @@
 
 #define VMA_STATIC_VULKAN_FUNCTIONS 1
 #define VMA_DYNAMIC_VULKAN_FUNCTIONS 0
+#define VMA_USE_STL_CONTAINERS 0
+#define VMA_USE_STL_VECTOR 0
+#define VMA_USE_STL_UNORDERED_MAP 0
+#define VMA_USE_STL_LIST 0
 #define VMA_IMPLEMENTATION
 
 #define VK_NO_PROTOTYPES
@@ -14,7 +18,8 @@
 #define VMA_DEBUG_MARGIN 16
 #define VMA_DEBUG_DETECT_CORRUPTION 1
 #endif
-#include <iostream>
+
+#include <iostream>
 #include <vector>
 
 #include <vulkan/vulkan.h>
@@ -50,7 +55,9 @@ void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT
         func(instance, debugMessenger, pAllocator);
 }
 
-#include "vka.h"
+#include "vkd.h"
+#include "vkb.h"
+#include "vkc.h"
 
 namespace vkrt
 {

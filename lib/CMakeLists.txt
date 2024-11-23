@@ -5,7 +5,7 @@ if (WIN32)
 endif()
 
 
-add_library( rt STATIC vkrt.cpp  inc/vkrt.h  inc/vka.h)
+add_library( rt STATIC vkrt.cpp  inc/vkrt.h  inc/vka.h inc/vkb.h inc/vkc.h inc/vkd.h inc/vkt.h)
 target_include_directories(rt PUBLIC inc)
 add_library(rt::rt ALIAS rt)
 target_include_directories( rt PRIVATE ext/volk)
